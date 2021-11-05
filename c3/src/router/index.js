@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Browse from '../views/Browse.vue';
 import Cart from '../views/Cart.vue';
+import Rating from '../views/Rating.vue';
+
 
 Vue.use(VueRouter);
 
@@ -13,9 +14,9 @@ const routes = [
     component: Home,
   },
   {
-    path: '/browse',
-    name: 'Browse',
-    component: Browse,
+    path: '/Rating',
+    name: 'Rating',
+    component: Rating,
   },
   {
     path: '/cart',

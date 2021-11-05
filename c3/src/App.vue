@@ -7,7 +7,7 @@
       </router-link>
     </div>
     <div class="side">
-      <router-link to="/browse">
+      <router-link to="/rating">
         <div class="rating">
           <img src="/images/rating.png">
           <div class="text">
