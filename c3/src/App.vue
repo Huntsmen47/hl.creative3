@@ -27,7 +27,11 @@
     </div>
   </div>
   <router-view />
-  <div class="footer"><a href="https://github.com/Huntsmen47/hl.creative3.git">Git Repo</a></div>
+  
+  <div class="footer">
+    <div class="credits"><h4>SAMUEL BENNION / S BAEK / HUNTER LARSON</h4></div>
+    <a href="https://github.com/Huntsmen47/hl.creative3.git">Git Repo</a>
+    </div>
 </div>
 </template>
 
@@ -134,5 +138,6 @@ a:link, a:visited,  a:hover, a:active
   padding-top: 2vw;
   justify-content: center;
   font-size: 2vw;
+  text-align: center;
 }
 </style>
