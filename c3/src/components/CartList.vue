@@ -56,33 +56,37 @@ export default {
 
 <style scoped>
 .wrapper {
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .products {
   margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
   justify-content: space-around;
-  width: 1200px; 
+  width: 100%;
+  /*width: 1200px; */
 }
 
 .product {
   display: grid; 
   border: solid black; 
-  grid-template-rows: 1fr 5vw 3vw 3vw 5vw;
-  margin: 10px;
-  margin-top: 50px;
-  width: 300px;
+  
+  /*grid-template-rows: 1fr 5vw 3vw 3vw 5vw;*/
+  margin: 1em;
+  /*margin-top: 50px;*/
+  /*width: 300px;*/
 }
 
 .department {
   display: grid; 
   background: #0062b8;
   color: #000;
-  height: 10vw;
+  /*height: 10vw;*/
 }
 
 .department h1 {
@@ -121,12 +125,123 @@ export default {
 }
 
 button {
-  height: 70px;
+  /*height: 70px;
   width: 80px; 
+  */
   background: #000;
   color: white;
   border: none;
 
+}
+@media all and (min-width:390px) and (max-width: 700px) {
+ .products {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  justify-content: space-around;
+  width: 100%;
+  /*width: 1200px; */
+}
+
+.product {
+  display: flex; 
+  border: solid black; 
+  width: 70%;
+  margin-left: 0;
+  margin-right: 0;
+
+  margin-bottom: 4px;
+}
+
+.product {
+  display: grid; 
+  border: solid black; 
+  
+  /*grid-template-rows: 1fr 5vw 3vw 3vw 5vw;*/
+  margin: 1em;
+  /*margin-top: 50px;*/
+  /*width: 300px;*/
+}
+
+.department {
+  display: grid; 
+  background: #0062b8;
+  color: #000;
+  /*height: 10vw;*/
+}
+
+.department h1 {
+  justify-self: center;
+  align-self: center;
+  color: white; 
+}
+
+.name {
+  padding: 0 6px; 
+  margin: 0;
+}
+
+.name h2{
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
+
+.review {
+  text-align: center;
+  font-size: 30px;
+  margin: 0;
+}
+.review p{
+  margin: 0;
+}
+
+.reputation {
+  font-size: 32px;
+  text-align: center;
+  margin: 0;
+}
+.reputation p{
+  margin: 0;
+}
+
+.last {
+  display: block; 
+  margin: 0;
+}
+
+.price {
+  margin: 0;
+  padding: 0; 
+  font-size: 28px;
+  text-align: center;
+  color: red; 
+}
+.price h2{
+  margin: 0;
+  padding: 0; 
+}
+button {
+  /*height: 70px;
+  width: 80px; 
+  */
+  margin: 0;
+  background: #000;
+  color: white;
+  border: none;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  height: 40px;
+  margin-bottom: 2px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
 }
 
 

@@ -73,12 +73,14 @@ export default {
 </script>
 
 <style scoped>
+
 .wrapper {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 0fr;
   align-items: center;
   justify-content: center;
 }
+
 
 .guide {
   display: grid; 

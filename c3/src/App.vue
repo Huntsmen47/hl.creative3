@@ -55,7 +55,10 @@ body {
 
 a:link, a:visited,  a:hover, a:active
 {
+    /*
+    Commented out because it was causing problems on mobile.
     color: #000000;
+    */
     text-decoration: none;
 }
 
