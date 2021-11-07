@@ -1,38 +1,59 @@
 <template>
-<div>
-  <div class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a @click="select('United States')" href="#" class="pure-menu-link">United States</a></li>
-      <li class="pure-menu-item"><a @click="select('Canada')" href="#" class="pure-menu-link">Canada</a></li>
-      <li class="pure-menu-item"><a @click="select('Mexico')" href="#" class="pure-menu-link">Mexico</a></li>
-      <li class="pure-menu-item"><a @click="select('Brazil')" href="#" class="pure-menu-link">Brazil</a></li>
-    </ul>
+<div class = "wrapper">
+  <h2>Search a department to find the top 5 rated Professors</h2>
+  <div class="search">
+    <form class="pure-form">
+      <i class="fas fa-search"></i><input v-model="searchText" />
+    </form>
   </div>
+  <div v-if="searchText != ''">
   <ProductList :products="products" />
+  </div>
 </div>
 </template>
 
 <script>
 import ProductList from "../components/ProductList.vue"
 export default {
-  name: 'Browse',
+  name: 'Rating',
   components: {
     ProductList
   },
   data() {
-    return {
-      country: '',
-    }
-  },
-  computed: {
-    products() {
-      return this.$root.$data.products.filter(product => product.country === this.country);
-    }
-  },
-  methods: {
-    select(country) {
-      this.country = country;
-    }
-  }
+   return {
+     searchText: '',
+   }
+ },
+ method: {
+
+ },
+ computed: {
+   products() {
+        var jArray = this.$root.$data.products.filter(product => (product.tDept.toLowerCase().search(this.searchText.toLowerCase()) >= 0));
+        var nArray = [];
+        for (var i = 0; i < jArray.length; i++) {
+          if (nArray.length === 5) {
+            nArray = nArray.sort(function(a, b) {
+        return  b.tNumRatings-a.tNumRatings ;
+});
+            return nArray;
+          }
+          if (jArray[i].overall_rating === '5.0') {
+             nArray.push(jArray[i]);
+           }
+        }
+        return nArray;
+   },
+ }
 }
 </script>
+
+<style scoped>
+.wrapper{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+</style>

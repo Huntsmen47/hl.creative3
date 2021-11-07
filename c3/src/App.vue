@@ -3,7 +3,7 @@
   <div class="menu">
     <div class="search">
       <router-link to="/">
-        <h1>Rate My BYU Professors Data</h1> 
+        <h1>Rate My BYU Professors Data</h1>
       </router-link>
     </div>
     <div class="side">
@@ -21,13 +21,13 @@
           <div class="text2">
             <p>Favorite: {{numberOfItems}}</p>
           </div>
-          
+
         </div>
       </router-link>
     </div>
   </div>
   <router-view />
-  <div class="footer"><a href="https://github.com/BYU-CS-260-Spring-2021/lab-3b-grocery-store-ekdlsks7437">Git Repo</a></div>
+  <div class="footer"><a href="https://github.com/Huntsmen47/hl.creative3.git">Git Repo</a></div>
 </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
   name: 'App',
   computed: {
     numberOfItems() {
-      return this.$root.$data.cart.length;  
+      return this.$root.$data.cart.length;
     }
   },
 }
@@ -62,8 +62,8 @@ a:link, a:visited,  a:hover, a:active
 .menu {
   display: grid;
   background-color: #002e5d;
-  grid-template-rows: 2fr 1fr; 
-  
+  grid-template-rows: 2fr 1fr;
+
 }
 
 .search {
@@ -73,36 +73,36 @@ a:link, a:visited,  a:hover, a:active
 }
 
 .search h1 {
-  color: white; 
+  color: white;
   font-size: 3vw;
 }
 
 .side {
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr 1fr;
 
 }
 
 
 .rating {
-  display: grid; 
+  display: grid;
   margin-right: 10%;
 }
 
 .rating img {
-   width: 10%; 
+   width: 10%;
    align-self: end;
    justify-self: end;
 }
 
 .text {
-  display: grid; 
+  display: grid;
   align-self: end;
   justify-self: end;
 }
 
 .text p{
-  color: white; 
+  color: white;
 }
 
 .cart {
@@ -111,17 +111,17 @@ a:link, a:visited,  a:hover, a:active
 .cart img{
   justify-self: center;
   align-self: center;
-  width: 10%; 
+  width: 10%;
 }
 
 .text2 {
-  display: grid; 
+  display: grid;
   align-self: end;
   justify-self: end;
 }
 
 .text2 p{
-  color: white; 
+  color: white;
 }
 
 .footer {
@@ -133,5 +133,3 @@ a:link, a:visited,  a:hover, a:active
   font-size: 2vw;
 }
 </style>
-
-
