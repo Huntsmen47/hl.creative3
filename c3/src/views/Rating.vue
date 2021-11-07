@@ -1,6 +1,6 @@
 <template>
 <div class = "wrapper">
-  <h2>Search a department to find the top 5 rated Professors</h2>
+  <h2 class="head">Search a department to find the top 5 rated Professors</h2>
   <div class="search">
     <form class="pure-form">
       <i class="fas fa-search"></i><input v-model="searchText" />
@@ -53,6 +53,9 @@ export default {
     display: grid;
     align-items: center;
     justify-content: center;
+}
+.head{
+  text-align: center;
 }
 
 
