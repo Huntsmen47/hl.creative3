@@ -50,9 +50,7 @@ export default {
 }
 
 body {
-  margin: auto 10px;
-  margin-bottom: 50px;
-
+  margin: 0;
 }
 
 a:link, a:visited,  a:hover, a:active
